@@ -73,14 +73,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <nav className="flex justify-evenly container mx-auto items-center gap-4">
+        <nav className="grid md:flex justify-center md:justify-evenly container mx-auto items-center gap-4 ">
           <div>
-            <Image alt="dOMP Logo" src={logo} width={200} />
+            <Image alt="dOMP Logo" src={logo} width={200} className="mx-auto" />
           </div>
           <h1 className="text-4xl text-center p-8 font-bold">
             Welcome to the Online Marketplace
           </h1>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-end">
             <DarkModeToggle />
             <button onClick={toggleCart}>
               <span className="material-symbols-outlined items-center">

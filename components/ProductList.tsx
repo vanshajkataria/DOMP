@@ -18,8 +18,8 @@ const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {
   return (
     <div className='container mx-auto'>
       <h2 className='text-3xl font-bold p-4'>Products</h2>
-      <div className='container mx-auto'>
-      <ul className='grid grid-cols-4'>
+      <div className='container mx-auto px-8'>
+      <ul className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
         {products.map((product) => (
           <li key={product.id} className='grid mx-auto text-center'>
             <Image
@@ -28,7 +28,7 @@ const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {
               width={250}
               height={250}
             />
-            <p className='text-xl'>{product.name}</p>
+            <p className='text-xl max-md:text-center'>{product.name}</p>
             <p className='text-sm pb-2'>Price: ₹{product.price}</p>
             <button className='w-fit mx-auto px-2 rounded-lg border-2 bg-orange-400 border-orange-400 hover:bg-transparent hover:text-orange-400 duration-300 ease-in-outd' onClick={() => onAddToCart(product.name)}>
               Add to Cart
