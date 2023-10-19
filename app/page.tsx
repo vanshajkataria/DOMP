@@ -86,15 +86,16 @@ export default function Home() {
               <span className="material-symbols-outlined items-center">
                 local_mall
               </span>
-              ({calculateTotalItemCount()}) {/* Display the total item count */}
+              ({calculateTotalItemCount()}) 
             </button>
             {isCartOpen && (
               <CartOverlay
                 cart={cart}
                 products={products}
                 onClose={toggleCart}
-                onRemoveFromCart={removeItemFromCart}
-              />
+                onRemoveFromCart={removeItemFromCart} onBuyNow={function (): void {
+                  throw new Error("Function not implemented.");
+                } }              />
             )}
           </div>
         </nav>
