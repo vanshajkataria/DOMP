@@ -4,7 +4,7 @@ const privateKey = process.env.PRIVATE_KEY;
 const provider = new ethers.JsonRpcProvider(ethereumRpcUrl);
 const wallet = new ethers.Wallet(privateKey, provider);
 
-const contractAddress = 'YOUR_CONTRACT_ADDRESS';
+const contractAddress = 'https://sepolia.etherscan.io';
 const contractABI = [ /* Your contract's ABI */ ];
 
 const contract = new ethers.Contract(contractAddress, contractABI, wallet);

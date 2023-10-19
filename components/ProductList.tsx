@@ -6,7 +6,7 @@ interface Product {
   name: string;
   price: number;
   alt: string;
-  src: StaticImageData; // Change the type of src
+  src: StaticImageData;
 }
 
 interface ProductListProps {
@@ -25,12 +25,12 @@ const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {
             <Image
               alt={product.alt}
               src={product.src}
-              width={250} // Set the width of the image
-              height={250} // Set the height of the image
+              width={250}
+              height={250}
             />
-            <p>{product.name}</p>
-            <p>Price: ₹{product.price}</p>
-            <button className='w-fit' onClick={() => onAddToCart(product.name)}>
+            <p className='text-xl'>{product.name}</p>
+            <p className='text-sm pb-2'>Price: ₹{product.price}</p>
+            <button className='w-fit mx-auto px-2 rounded-lg border-2 bg-orange-400 border-orange-400 hover:bg-transparent hover:text-orange-400 duration-300 ease-in-outd' onClick={() => onAddToCart(product.name)}>
               Add to Cart
             </button>
           </li>
